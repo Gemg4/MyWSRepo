@@ -1,0 +1,1 @@
+# MyWSRepo - combined activities
