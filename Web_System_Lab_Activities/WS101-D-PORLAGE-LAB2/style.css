@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #dfdfdf;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2E354D;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    flex-direction: column;
+    height: 25vh;
+    position: relative;
+}
+
+.profile {
+    background-color: gray;
+    border: 8px solid white;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    bottom: -10vh;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px
+}
+
+nav .wrapper-1,
+.wrapper-2 {
+    flex: 1;
+    font-size: 1.1rem;
+    /* height: 100px; */
+    padding: 20px 10px 10px 40px;
+    border-bottom: 8px solid white;
+    transition: all 200ms ease-in-out;
+}
+
+nav .wrapper-1 {
+    border-right: 8px solid white;
+    border-bottom-right-radius: 100px;
+}
+
+nav .wrapper-2 {
+    border-left: 8px solid white;
+    border-bottom-left-radius: 100px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+}
+
+.self {
+    border-bottom: 1px solid #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer {
+    background-color: #2E354D;
+    height: 7vh;
+    width: 100%;
+}
+
+/* =================================== Skills - Style - Rule ==================================== */
+#skills {
+    list-style: none;
+}
+
+#skills li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.meta-session {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meta-range {
+    background-color: #33333362;
+    height: 10px;
+    width: 100%;
+}
+
+#skill-1 .range {
+    background-color: #2E354D;
+    height: 100%;
+    width: 40%;
+}
+
+#skill-2 .range {
+    background-color: #2E354D;
+    height: 100%;
+    width: 50%;
+}
+
+#skill-3 .range {
+    background-color: #2E354D;
+    height: 100%;
+    width: 60%;
+}
+
+/* =================================== Extras - Style - Rule ==================================== */
+
+.inner-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.inner-heading:last-of-type {
+    font-size: 1rem;
+}
+
+/* ======================================= Media Queries ======================================== */
+
+/* Mobile Devices*/
+@media (max-width:480px) {
+    header {
+        padding: 10px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        >div {
+            width: 57%;
+        }
+    }
+
+    .profile {
+        float: right;
+        position: static;
+        transform: unset;
+    }
+
+    nav {
+        gap: 0;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        padding: 15px 30px;
+    }
+
+    nav .wrapper-1,
+    nav .wrapper-2 {
+        border: none;
+        padding: 0;
+        >p {
+            padding-bottom: 5px;
+        }
+    }
+
+    section {
+        padding: 0 30px 30px 30px;
+        gap: 30px;
+    }
+}
+
+/* Tablet size screen*/
+@media (max-width:768px) {
+    body {
+        height: unset;
+    }
+
+    nav .wrapper-1,
+    nav .wrapper-2{
+        font-size: 1rem;
+    }
+
+    nav .wrapper-1 {
+        border-bottom-right-radius: 50%;
+    }
+
+    nav .wrapper-2 {
+        border-bottom-left-radius: 50%;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop */
+@media (max-width:1200px) {}
